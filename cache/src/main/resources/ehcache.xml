@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+
+    <diskStore path="java/cache/temporary"/><!-- 达到内存上限后缓存文件保存位置 -->
+
+    <defaultCache
+            maxElementsInMemory="10000"
+            memoryStoreEvictionPolicy="LRU"
+            eternal="false"
+            timeToIdleSeconds="1"
+            timeToLiveSeconds="5"
+            overflowToDisk="false"
+            diskPersistent="false"
+    />
+
+    <!-- 测试 -->
+    <cache
+            name="cacheManager"
+            memoryStoreEvictionPolicy="LRU"
+            maxElementsInMemory="1"
+            eternal="false"
+            timeToIdleSeconds="7200"
+            timeToLiveSeconds="7200"
+            overflowToDisk="true" />
+</ehcache>
