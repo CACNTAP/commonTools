@@ -4,12 +4,14 @@ import com.tools.cache.CacheService;
 import com.tools.cache.annotation.UseEncache;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
 @Aspect
 @Component
+@Order(2)
 public class CacheProcessor {
 
 

@@ -1,6 +1,7 @@
 package com.tools.demo.controller;
 
 import com.tools.cache.annotation.UseEncache;
+import com.tools.log.annotation.Log;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class MainController {
       }
 
     @RequestMapping("/hello")
+    @Log
     @UseEncache
     public String hello() {
         return getStrings("sdasdsa");

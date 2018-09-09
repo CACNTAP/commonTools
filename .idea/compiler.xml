@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cache" />
+        <module name="lolg" />
         <module name="service" />
       </profile>
     </annotationProcessing>
